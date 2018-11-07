@@ -6,6 +6,6 @@
   },
   "homepage": "https://github.com/dhanyn10/nodejs-mongodb-api#readme",
   "dependencies": {
-    "mongodb": "^2.2.5"
+    "mongodb": "2.2.5"
   }
 }
