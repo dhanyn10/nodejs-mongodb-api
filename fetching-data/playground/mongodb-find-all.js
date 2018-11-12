@@ -8,10 +8,12 @@ MongoClient.connect('mongodb://localhost:27017/nodejsapp', (err, db) => {
     console.log('connected to mongodb');
 
     /**
-     * count database records without any filtering
+     * display all value from database without any filtering
+     * keywords.
      */
-    db.collection('Todos').find().count().then((count) => {
-        console.log(`count records ${count}`);
+    db.collection('Todos').find().toArray().then((docs) => {
+        console.log('display all records');
+        console.log(JSON.stringify(docs, undefined, 2));
     }, (err) => {
         console.log('error ', err);
     });
